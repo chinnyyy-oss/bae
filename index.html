@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <title>For My Baby 💖</title>
-
 <style>
     body {
         background: linear-gradient(to bottom right, #ffd6e7, #fff0f5);
@@ -12,7 +11,6 @@
         padding: 50px;
         color: #ff4d88;
     }
-
     .card {
         background: white;
         border-radius: 25px;
@@ -21,22 +19,18 @@
         margin: auto;
         box-shadow: 0 8px 20px rgba(0,0,0,0.1);
     }
-
     h1 { font-size: 40px; }
     p { font-size: 20px; }
-
     .heart {
         font-size: 50px;
         animation: beat 1s infinite;
         margin: 20px 0;
     }
-
     @keyframes beat {
         0% { transform: scale(1); }
         50% { transform: scale(1.2); }
         100% { transform: scale(1); }
     }
-
     button {
         background-color: #ff80ab;
         border: none;
@@ -47,10 +41,7 @@
         cursor: pointer;
         margin-top: 20px;
     }
-
-    button:hover {
-        background-color: #ff4d88;
-    }
+    button:hover { background-color: #ff4d88; }
 
     #videoPlayer {
         display: none;
@@ -58,13 +49,11 @@
     }
 </style>
 </head>
-
 <body>
 
 <div class="card">
     <h1>Hi Baby 💕</h1>
     <p>You make my days brighter and my heart happier 💖</p>
-
     <div class="heart">❤️</div>
 
     <p id="hiddenMessage" style="display:none;">
@@ -73,10 +62,10 @@
 
     <button onclick="revealEverything()">Click me 💌</button>
 
-    <!-- VIDEO -->
+    <!-- Local Video -->
     <div id="videoPlayer">
-        <video id="myVideo" width="400" loop muted playsinline>
-            <source src="./0331.mp4" type="video/mp4">
+        <video id="myVideo" width="400" loop>
+            <source src="0331.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
     </div>
@@ -88,12 +77,7 @@ function revealEverything() {
     document.getElementById("videoPlayer").style.display = "block";
 
     let video = document.getElementById("myVideo");
-
-    video.play().then(() => {
-        video.muted = false; // unmute after click
-    }).catch(err => {
-        console.log("Playback blocked:", err);
-    });
+    video.play();
 }
 </script>
 
