@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For My Baby 💖</title>
+<style>
+    body {
+        background: linear-gradient(to bottom right, #ffd6e7, #fff0f5);
+        font-family: "Comic Sans MS", cursive;
+        text-align: center;
+        padding: 50px;
+        color: #ff4d88;
+    }
+    .card {
+        background: white;
+        border-radius: 25px;
+        padding: 30px;
+        max-width: 500px;
+        margin: auto;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+    h1 { font-size: 40px; }
+    p { font-size: 20px; }
+    .heart {
+        font-size: 50px;
+        animation: beat 1s infinite;
+        margin: 20px 0;
+    }
+    @keyframes beat {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.2); }
+        100% { transform: scale(1); }
+    }
+    button {
+        background-color: #ff80ab;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 20px;
+        font-size: 16px;
+        color: white;
+        cursor: pointer;
+        margin-top: 20px;
+    }
+    button:hover { background-color: #ff4d88; }
+
+    #videoPlayer {
+        display: none;
+        margin-top: 20px;
+    }
+</style>
+</head>
+<body>
+
+<div class="card">
+    <h1>Hi Baby 💕</h1>
+    <p>You make my days brighter and my heart happier 💖</p>
+    <div class="heart">❤️</div>
+
+    <p id="hiddenMessage" style="display:none;">
+        hi bae i know you’ve been feeling sad for a while now, and i just want you to know that i see you, and i care about you so much. you don’t always have to pretend to be okay with me. if you’re tired, hurt, or just not feeling like yourself, that’s okay. you’re allowed to feel that way. you deserve all the happiness that the world could offer, and even more than that. you deserve peace, comfort, and days where your heart feels light again. i know things haven’t been easy, but please don’t forget how strong you are, even on the days you feel weak. i may not always know the perfect words, but i’ll always be here for you. through your quiet days, your heavy thoughts, and everything in between. you don’t have to go through this alone, okay? you’re really important to me. you matter more than you think, and i’m always here, no matter what! muah💘
+    </p>
+
+    <button onclick="revealEverything()">Click me 💌</button>
+
+    <!-- Local Video -->
+    <div id="videoPlayer">
+        <video id="myVideo" width="400" loop>
+            <source src="0331.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</div>
+
+<script>
+function revealEverything() {
+    document.getElementById("hiddenMessage").style.display = "block";
+    document.getElementById("videoPlayer").style.display = "block";
+
+    let video = document.getElementById("myVideo");
+    video.play();
+}
+</script>
+
+</body>
+</html>
